@@ -1,6 +1,6 @@
-import { SystemBuilder, SystemSettings } from "./types";
+import { ISystemBuilder, SystemSettings } from "./types";
 
-export class Builder implements SystemBuilder {
+export class Builder implements ISystemBuilder {
   private state: SystemState = "";
   public build({ initiator, rules, iterations }: SystemSettings): Expression {
     this.state = initiator;
