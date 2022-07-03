@@ -1,12 +1,11 @@
 import { container } from "./composition";
-import { SystemBuilder } from "./l-system/types";
+import { ISystemBuilder } from "./l-system/types";
 
-const builder = container.get<SystemBuilder>();
+import { Drawer } from "./graphics/drawer/types";
 
-console.log(
-  builder.build({
-    initiator: "0",
-    iterations: 3,
-    rules: { "1": "11", "0": "1[0]0" },
-  })
-);
+const drawer = container.get<Drawer>();
+
+drawer.drawLine({
+  start: { x: 0, y: 0 },
+  end: { x: 100, y: 100 },
+});

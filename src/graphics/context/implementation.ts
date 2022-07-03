@@ -11,7 +11,7 @@ export class CanvasContextProvider implements DrawingContextProvider {
     private pixelRatioSource: PixelRatioSource,
     private settings: AppSettings
   ) {
-    const element = this.elementSource.getElementById("canvas");
+    const element = this.elementSource.getElement("canvas");
     if (!element) throw new Error("Failed to find a canvas element");
 
     this.element = element as HTMLCanvasElement;

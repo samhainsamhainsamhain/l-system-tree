@@ -3,6 +3,7 @@ import { IStartSelector } from "./types";
 
 export class StartPointSelector implements IStartSelector {
   constructor(private settings: AppSettings) {}
+
   public selectStart(): Point {
     const { width, height } = this.settings.canvasSize;
 

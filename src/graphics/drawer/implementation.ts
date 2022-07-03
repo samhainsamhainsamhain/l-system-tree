@@ -1,5 +1,6 @@
 import { DrawingContext, DrawingContextProvider } from "../context/types";
 import { Drawer, BrushSettings } from "./types";
+import { DEFAULT_COLOR, DEFAULT_WIDTH } from "./constants";
 
 export class CanvasDrawer implements Drawer {
   private context: DrawingContext = null;
