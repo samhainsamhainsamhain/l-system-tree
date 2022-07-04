@@ -1,6 +1,6 @@
-import { DrawingContext, DrawingContextProvider } from "../context/types";
-import { Drawer, BrushSettings } from "./types";
+import { DrawingContext, DrawingContextProvider } from "../context";
 import { DEFAULT_COLOR, DEFAULT_WIDTH } from "./constants";
+import { Drawer, BrushSettings } from "./types";
 
 export class CanvasDrawer implements Drawer {
   private context: DrawingContext = null;
@@ -9,6 +9,7 @@ export class CanvasDrawer implements Drawer {
     this.context = this.contextProvider.getInstance();
     if (!this.context) throw new Error("Failed to access the drawing context.");
   }
+
   public drawLine(
     { start, end }: Line,
     { color, width }: BrushSettings = {}

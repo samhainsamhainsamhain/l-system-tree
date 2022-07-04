@@ -2,6 +2,7 @@ import { container } from "./core";
 
 import "../settings";
 import "../app/composition";
+import "../random/composition";
 import "../dom/composition";
 
 import "../geometry/location/composition";

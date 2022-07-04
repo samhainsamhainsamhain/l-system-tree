@@ -14,7 +14,10 @@ export class App implements Application {
 
   start(): void {
     const system = this.builder.build(this.settings);
-    const lines = this.interpreter.translate(system);
-    lines.forEach((line) => this.drawer.drawLine(line));
+    const instructions = this.interpreter.translate(system);
+    instructions.forEach((instruction) => {
+      const { line, ...settings } = instruction;
+      this.drawer.drawLine(line, settings);
+    });
   }
 }
