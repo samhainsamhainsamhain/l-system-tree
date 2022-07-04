@@ -1,13 +1,16 @@
 import { container } from "./core";
 
 import "../settings";
-import "../l-system/composition";
-import "../geometry/shape/composition";
-import "../geometry/location/composition";
-import "../graphics/drawer/composition";
-import "../graphics/context/composition";
 import "../dom/composition";
 
-container.registerSingleton<Window>(() => window);
+import "../geometry/location/composition";
+import "../geometry/shape/composition";
+import "../l-system/composition";
 
+import "../graphics/context/composition";
+import "../graphics/drawer/composition";
+import "../interpreter/stack/composition";
+import "../interpreter/composition";
+
+container.registerSingleton<Window>(() => window);
 export { container };

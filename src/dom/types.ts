@@ -1,5 +1,5 @@
 export interface ElementSource {
-  getElement(id: string): HTMLElement | null;
+  getElement(id: string): Nullable<HTMLElement>;
 }
 
 export interface PixelRatioSource {

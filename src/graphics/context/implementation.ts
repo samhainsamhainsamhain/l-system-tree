@@ -3,8 +3,8 @@ import { ElementSource, PixelRatioSource } from "../../dom/types";
 import { DrawingContext, DrawingContextProvider } from "./types";
 
 export class CanvasContextProvider implements DrawingContextProvider {
-  private element: HTMLCanvasElement | null = null;
-  private context: DrawingContext | null = null;
+  private element: Nullable<HTMLCanvasElement> = null;
+  private context: Nullable<DrawingContext> = null;
 
   constructor(
     private elementSource: ElementSource,

@@ -1,4 +1,4 @@
-export type DrawingContext = CanvasRenderingContext2D | null;
+export type DrawingContext = Nullable<CanvasRenderingContext2D>;
 
 export interface DrawingContextProvider {
   getInstance(): DrawingContext;

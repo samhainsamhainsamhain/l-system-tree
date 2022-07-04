@@ -13,7 +13,7 @@ export class Builder implements ISystemBuilder {
   }
 
   private applyRules(rules: RuleSet): void {
-    const Characters: Array<Character> = this.state.split("");
+    const Characters: List<Character> = this.state.split("");
     this.state = "";
 
     for (const character of Characters) {

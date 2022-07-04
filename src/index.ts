@@ -1,11 +1,14 @@
 import { container } from "./composition";
-import { ISystemBuilder } from "./l-system/types";
-
 import { Drawer } from "./graphics/drawer/types";
+import { SystemInterpreter } from "./interpreter";
+import { ISystemBuilder } from "./l-system/types";
+import { AppSettings } from "./settings";
 
+const builder = container.get<ISystemBuilder>();
 const drawer = container.get<Drawer>();
+const interpreter = container.get<SystemInterpreter>();
+const settings = container.get<AppSettings>();
 
-drawer.drawLine({
-  start: { x: 0, y: 0 },
-  end: { x: 100, y: 100 },
-});
+const system = builder.build(settings);
+const lines = interpreter.translate(system);
+lines.forEach((line) => drawer.drawLine(line));
