@@ -1,6 +1,7 @@
 import { container } from "./core";
 
 import "../settings";
+import "../app/composition";
 import "../dom/composition";
 
 import "../geometry/location/composition";
